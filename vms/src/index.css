@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Manrope', sans-serif;
+}
+
+.loginbg{
+  background: url('./assets/loginbg.svg'), lightgray -48px -0.062px / 106.667% 100.012% no-repeat;
+background-blend-mode: soft-light;
+}
+.tr tr:nth-child(even) td { background: #5f6268; }
+.tr tr:nth-child(odd) td { background: #b5bdbf; }
