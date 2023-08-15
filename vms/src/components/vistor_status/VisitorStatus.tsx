@@ -34,9 +34,9 @@ export default function VisitorStatus({ page }: VisitorStatusProps) {
               key={_}
               className={`${
                 _ === active
-                  ? "bg-vms-darkest text-white"
+                  ? "bg-vms-primary text-white"
                   : "bg-white text-vms-darkest"
-              } text-md cursor-pointer px-4 py-2 border border-[#DADBF2] font-medium leading-6 rounded-lg`}
+              } text-md cursor-pointer px-4 py-2 border border-vms-primary font-medium leading-6 rounded-lg`}
               onClick={() => setActive(_)}
             >
               {status}
@@ -51,7 +51,7 @@ export default function VisitorStatus({ page }: VisitorStatusProps) {
           </div>
 
           {page === "Visitors" && (
-            <div className="px-4 cursor-pointer py-2 flex justify-between items-center bg-vms-darkest rounded-lg text-sm text-white">
+            <div className="px-4 cursor-pointer py-2 flex justify-between items-center bg-vms-primary rounded-lg text-sm text-white">
               <p>Export Result</p>
             </div>
           )}
@@ -65,7 +65,7 @@ export default function VisitorStatus({ page }: VisitorStatusProps) {
           </p>
           <div className="flex justify-center gap-5 items-center">
             <DateSelect
-              className="border-[#505173] border w-full items-center rounded-lg text-lg p-2"
+              className="border-vms-primary border w-full items-center rounded-lg text-lg p-2"
               placeholderText="Filter by date"
               // selected={expiryDate}
               // onChange={(date) => {
@@ -75,7 +75,7 @@ export default function VisitorStatus({ page }: VisitorStatusProps) {
             />
             <p>-</p>
             <DateSelect
-              className="border-[#505173] border w-full items-center rounded-lg text-lg p-2"
+              className="border-vms-primary border w-full items-center rounded-lg text-lg p-2"
               placeholderText="Filter by date"
               // selected={expiryDate}
               // onChange={(date) => {
@@ -84,7 +84,7 @@ export default function VisitorStatus({ page }: VisitorStatusProps) {
               maxDate={new Date()}
             />
           </div>
-          <button className="px-4 py-2 bg-vms-darkest rounded-lg text-sm font-medium text-white">
+          <button className="px-4 py-2 bg-vms-primary rounded-lg text-sm font-medium text-white">
             Apply
           </button>
         </div>

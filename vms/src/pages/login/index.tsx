@@ -3,13 +3,13 @@ import {BiUserCircle} from 'react-icons/bi'
 import {AiFillLock} from 'react-icons/ai'
 export default function Login() {
   return (
-    <div className="relative w-full h-screen flex flex-col gap-3 justify-center items-center">
+    <div className="relative w-full min-h-screen flex flex-col gap-3 justify-center items-center">
 
       <div className="relative z-30">
         <img src={logo} alt=""/>
       </div>
 
-      <div className="w-[50%] rounded-xl bg-white p-12 relative z-30 shadow-[0px_0px_24px_0px_rgba(0,0,0,0.05)]">
+      <div className="w-[36rem] rounded-xl bg-white p-12 relative z-30 shadow-[0px_0px_24px_0px_rgba(0,0,0,0.05)]">
         <h1 className="text-center text-vms-darkest text-2xl font-extrabold">Admin Login</h1>
 
         <form action="" className="mt-[3.25rem]">

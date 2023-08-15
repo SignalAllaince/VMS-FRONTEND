@@ -16,7 +16,7 @@ export default  {
           primary:"#a64152",
           darkest:"#141533",
           dark:"#142633",
-          medium:"#8787A8",
+          medium:"#a64152be",
         }
       },
       boxShadow: {

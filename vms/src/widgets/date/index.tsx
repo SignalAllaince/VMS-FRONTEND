@@ -31,7 +31,7 @@ export default function DateSelect(
     const CustomInput = React.forwardRef(({value, onClick, onChange} : any, ref : any) => {
         return <div onClick={onClick}
                 className={`flex flex-row-reverse item-center cursor-pointer items-center border  ` + className + (disbaled ? " opacity-80" : '')} style={style}  >
-            <BsCalendar4  size="20" className='mr-2 text-vms-darkest -ml-1'/>
+            <BsCalendar4  size="20" className='mr-2 text-vms-primary -ml-1'/>
             <input 
                 className='disabled:cursor-not-allowed focus:outline-none text-sm w-full placeholder:text-[#505173] text-[#505173] bg-transparent'
                 value={value ? value : nullValuePlaceHolder}

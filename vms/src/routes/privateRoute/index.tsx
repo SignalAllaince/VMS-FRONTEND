@@ -7,5 +7,5 @@ interface PrivateRoute{
 export default function PrivateRoute({ children}:PrivateRoute) {
     const isLoggedIn = localStorage.getItem("vms_user")
     
-  return isLoggedIn ? children : <Navigate to='/login'/>
+  return !isLoggedIn ? children : <Navigate to='/login'/>
 }

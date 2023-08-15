@@ -51,11 +51,11 @@ export default function BarChartBox() {
   ];
 
   return (
-    <div className="w-[50%] h-[400px] p-6 bg-white rounded-2xl">
+    <div className="w-[60%] p-6 bg-white rounded-2xl">
       <h2 className="leading-8 text-xl font-bold">Popular Visiting Times</h2>
-      <h1 className="text-5xl text-vms-darkest font-semibold">11 AM</h1>
+      <h1 className="text-5xl text-vms-primary font-semibold">11 AM</h1>
 
-      <ResponsiveContainer width="100%" height="100%" className="mt-9">
+      <ResponsiveContainer width="99%" height={300} className="mt-9">
         <BarChart
           width={700}
           height={300}
@@ -72,7 +72,7 @@ export default function BarChartBox() {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="visitors" className="rounded-[2px]" fill="#141533" />
+          <Bar dataKey="visitors" barSize={30} fill="#a64152" />
           {/* <Bar dataKey="uv" fill="#82ca9d" /> */}
         </BarChart>
       </ResponsiveContainer>
