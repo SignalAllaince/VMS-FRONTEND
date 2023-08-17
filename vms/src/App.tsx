@@ -5,6 +5,7 @@ import PrivateRoute from "./routes/privateRoute";
 import Layout from "./layout/Layout";
 import Visitors from "./pages/visitors";
 import Report from "./pages/reports";
+import AdminManagement from "./pages/adminManagement";
 
 function App() {
   return (
@@ -33,6 +34,14 @@ function App() {
               element={
                 <PrivateRoute>
                   <Report />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/Admin_Management"
+              element={
+                <PrivateRoute>
+                  <AdminManagement />
                 </PrivateRoute>
               }
             />

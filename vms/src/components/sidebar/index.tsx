@@ -1,6 +1,6 @@
 import { SACON } from "../../assets";
 import { sideNavArr } from "../../utils";
-import { RxDashboard } from "react-icons/rx";
+import { MdDashboard } from "react-icons/md";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { TbReportAnalytics } from "react-icons/tb";
 import { Link, useLocation } from "react-router-dom";
@@ -17,7 +17,7 @@ export default function SideBar() {
         <Link to={item.link} className="">
         <div className={`${item.link === location.pathname ? "text-vms-primary font-semibold" : "text-vms-medium"} hover:text-vms-primary transition-all flex justify-start items-center gap-3 py-4`}>
           {index === 0 ? (
-            <RxDashboard size={20} />
+            <MdDashboard size={20} />
           ) : index === 1 ? (
             <FaPeopleGroup size={20} />
           ) : index === 2 ? (

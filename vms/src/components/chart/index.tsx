@@ -51,7 +51,7 @@ export default function BarChartBox() {
   ];
 
   return (
-    <div className="w-[60%] p-6 bg-white rounded-2xl">
+    <div className="w-[100%] p-6 bg-white rounded-2xl">
       <h2 className="leading-8 text-xl font-bold">Popular Visiting Times</h2>
       <h1 className="text-5xl text-vms-primary font-semibold">11 AM</h1>
 
