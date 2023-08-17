@@ -5,6 +5,7 @@ import Table from "../table";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import DateSelect from "../../widgets/date";
+import Backdrop from "../../widgets/backdrop";
 
 interface VisitorStatusProps {
   page?: string;
@@ -12,6 +13,7 @@ interface VisitorStatusProps {
 export default function VisitorStatus({ page }: VisitorStatusProps) {
   // const [fromDate, setFromDate] = useState<Date | null>(null);
   const [active, setActive] = useState<number>(1);
+  const [showModal, setShowModal] = useState<boolean>(false);
   return (
     <div className="w-full p-6 bg-white mt-4 rounded-2xl">
       <div className="flex justify-between items-center">
@@ -90,7 +92,7 @@ export default function VisitorStatus({ page }: VisitorStatusProps) {
         </div>
       )}
 
-      {page !== "report" && <Table />}
+      {page !== "report" && <Table setShowModal={setShowModal} />}
 
       {page !== "report" && (
         <div>
@@ -134,6 +136,82 @@ export default function VisitorStatus({ page }: VisitorStatusProps) {
             </div>
           )}
         </div>
+      )}
+
+      {showModal && (
+        <Backdrop>
+          <div className="w-[50%] p-8 bg-white rounded-3xl">
+            <h2 className="text-xl font-bold leading-6 text-vms-primary">Visitors Status</h2>
+            <p className="mt-8 font-semibold text-vms-primary">Visitor’s Information</p>
+
+            <div className="my-3">
+              <h2 className="text-xs font-semibold text-vms-primary leading-[22px]">
+                Visitor’s Name
+              </h2>
+              <p className="text-xs font-nornal leading-[22px]">
+                Nzekwe Christian
+              </p>
+            </div>
+
+            <div className="my-3">
+              <h2 className="text-xs font-semibold text-vms-primary leading-[22px]">
+                Email Address
+              </h2>
+              <p className="text-xs font-nornal leading-[22px]">
+                emekanzekwe@gmail.com
+              </p>
+            </div>
+
+            <div className="flex justify-start gap-16 items-center">
+              <div className="my-3">
+                <h2 className="text-xs text-vms-primary font-semibold leading-[22px]">
+                  Appointment Date
+                </h2>
+                <p className="text-xs font-nornal leading-[22px]">
+                  DD - MM - YYYY
+                </p>
+              </div>
+
+              <div className="my-3">
+                <h2 className="text-xs text-vms-primary font-semibold leading-[22px]">
+                  Appointment Time
+                </h2>
+                <p className="text-xs font-nornal leading-[22px]">HH:MM AM</p>
+              </div>
+            </div>
+
+            <div className="my-3">
+              <h2 className="text-xs text-vms-primary font-semibold leading-[22px]">
+                Purpose of Meeting
+              </h2>
+              <p className="text-xs font-nornal leading-[22px] pb-12 border-b border-[#DADBF2]">
+                This is a placeholder text for the “Purpose of Meeting”. It does
+                not have to be long, just a simple reason why you want to meet
+                the employee. A Maximum of 3 lines would do.
+              </p>
+
+              <p className="mt-8 font-semibold text-vms-primary">Visitor’s Information</p>
+              <div className="my-3">
+                <h2 className="text-xs text-vms-primary font-semibold leading-[22px]">
+                  Employee Name
+                </h2>
+                <p className="text-xs font-nornal leading-[22px]">
+                  Nzekwe Gabriel
+                </p>
+              </div>
+
+              <div className="my-3">
+                <h2 className="text-xs text-vms-primary font-semibold leading-[22px]">
+                  Email Address
+                </h2>
+                <p className="text-xs font-nornal leading-[22px]">
+                  emekanzekwe@gmail.com{" "}
+                </p>
+              </div>
+            </div>
+            <button className="py-2 mx-auto w-40 rounded-lg border border-vms-primary bg-white flex justify-center items-center text-vms-primary hover:scale-105 hover:bg-vms-primary transition-all hover:text-white" onClick={()=>setShowModal(false)}>Close</button>
+          </div>
+        </Backdrop>
       )}
     </div>
   );

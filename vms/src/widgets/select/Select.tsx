@@ -3,11 +3,12 @@ import { BsChevronCompactDown } from "react-icons/bs";
 
 interface SelectProps{
   selectOptions: string[]
+  value?:  string
 }
-export default function Select({selectOptions}: SelectProps) {
+export default function Select({selectOptions,value}: SelectProps) {
   const [showDropDown, setShowDropDown] = useState<boolean>(false);
 
-  const [selectedOption, setSelectedOption] = useState<string>(selectOptions[0]);
+  const [selectedOption, setSelectedOption] = useState<string>(value ? value : "");
 
   const handleSelectedOption = (option: string) => {
         setSelectedOption(option);
@@ -20,7 +21,7 @@ export default function Select({selectOptions}: SelectProps) {
       tabIndex={0}
       onBlur={() => setShowDropDown(false)}
     >
-      <p className="text-xs ">{selectedOption}</p>
+      <p className="text-xs ">{!selectedOption ? "Choose an option" : selectedOption}</p>
       <BsChevronCompactDown className="text-vms-dark"/>
       {showDropDown && (
         <div className="absolute left-0 top-11 bg-white z-10 border border-[#DADBF2] w-full">
