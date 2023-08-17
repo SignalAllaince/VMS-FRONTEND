@@ -17,7 +17,7 @@ export default function VisitorStatus({ page }: VisitorStatusProps) {
   return (
     <div className="w-full p-6 bg-white mt-4 rounded-2xl">
       <div className="flex justify-between items-center">
-        <h2 className="text-xl leading-6 font-bold">Visitors Status</h2>
+        <h2 className="text-xl text-vms-primary leading-6 font-bold">Visitors Status</h2>
         {page === "Visitors" ||
           (page === "report" && (
             <input

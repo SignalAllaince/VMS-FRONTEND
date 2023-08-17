@@ -15,7 +15,7 @@ export default function AdminManagement() {
   return (
     <div className="w-[80%] p-4 mt-4 min-h-screen ml-[18%] bg-white rounded-2xl">
       <div className="flex justify-between items-center ">
-        <h2 className="text-xl leading-8 font-bold">Manage Admins</h2>
+        <h2 className="text-xl leading-8 text-vms-primary font-bold">Manage Admins</h2>
         <input
           className="py-2 px-4 w-[35%] rounded-lg bg-[#FAFAFF] focus:outline-none"
           type="search"
@@ -128,7 +128,7 @@ export default function AdminManagement() {
                   </label>
                   <input
                     type="text"
-                    className="w-full p-2 placeholder:text-xs rounded-[4px] border border-[#DADBF2] bg-white focus:outline-none"
+                    className="w-full p-2 text-xs placeholder:text-xs rounded-[4px] border border-[#DADBF2] bg-white focus:outline-none"
                     placeholder="Surname, First Name"
                   />
                 </div>
@@ -142,7 +142,7 @@ export default function AdminManagement() {
                   </label>
                   <input
                     type="text"
-                    className="w-full p-2 placeholder:text-xs rounded-[4px] border border-[#DADBF2] bg-white focus:outline-none"
+                    className="w-full p-2 text-xs placeholder:text-xs rounded-[4px] border border-[#DADBF2] bg-white focus:outline-none"
                     placeholder="Admin_01@gmail.com"
                   />
                 </div>
@@ -193,7 +193,7 @@ export default function AdminManagement() {
                   <input
                     type="text"
                     value={editFormData?.admin_name}
-                    className="w-full p-2 placeholder:text-xs rounded-[4px] border border-[#DADBF2] bg-white focus:outline-none"
+                    className="w-full p-2 placeholder:text-xs text-xs rounded-[4px] border border-[#DADBF2] bg-white focus:outline-none"
                     placeholder="Surname, First Name"
                   />
                 </div>
@@ -208,7 +208,7 @@ export default function AdminManagement() {
                   <input
                     type="text"
                     value={editFormData?.email_address}
-                    className="w-full p-2 placeholder:text-xs rounded-[4px] border border-[#DADBF2] bg-white focus:outline-none"
+                    className="w-full p-2 placeholder:text-xs text-xs rounded-[4px] border border-[#DADBF2] bg-white focus:outline-none"
                     placeholder="Admin_01@gmail.com"
                   />
                 </div>

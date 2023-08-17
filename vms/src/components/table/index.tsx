@@ -41,7 +41,7 @@ export default function Table({setShowModal}:TableProps) {
                 {visitor.checkOutTime}
               </td>
               <td className="flex justify-end items-center px-4 py-3">
-                <button className="mt-1 px-4 py-2 border border-vms-primary rounded-lg text-sm leading-[22px] text-vms-dark font-medium hover:bg-vms-primary hover:text-white hover:scale-105 transition-all" onClick={()=>setShowModal(true)}>View details</button>
+                <button className="mt-1 px-4 py-2 border border-vms-primary bg-vms-primary text-white rounded-lg text-sm leading-[22px] font-medium hover:bg-vms-primary hover:text-white hover:scale-105 transition-all" onClick={()=>setShowModal(true)}>View details</button>
               </td>
             </tr>
           ))}
